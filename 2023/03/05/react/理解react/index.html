@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>关于react - whitegl0ves</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="whitegl0ves"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="whitegl0ves"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="简单对比 react、vue，并理解 react"><meta property="og:type" content="blog"><meta property="og:title" content="关于react"><meta property="og:url" content="http://example.com/2023/03/05/react/%E7%90%86%E8%A7%A3react/"><meta property="og:site_name" content="whitegl0ves"><meta property="og:description" content="简单对比 react、vue，并理解 react"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://chulan-824.github.io/Chulan-Blog/assets/img/1.ea0df5f1.png"><meta property="article:published_time" content="2023-03-04T16:34:42.000Z"><meta property="article:modified_time" content="2023-08-08T13:03:59.837Z"><meta property="article:author" content="whitegl0ves"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://chulan-824.github.io/Chulan-Blog/assets/img/1.ea0df5f1.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/03/05/react/%E7%90%86%E8%A7%A3react/"},"headline":"关于react","image":["https://chulan-824.github.io/Chulan-Blog/assets/img/1.ea0df5f1.png"],"datePublished":"2023-03-04T16:34:42.000Z","dateModified":"2023-08-08T13:03:59.837Z","author":{"@type":"Person","name":"whitegl0ves"},"publisher":{"@type":"Organization","name":"whitegl0ves","logo":{"@type":"ImageObject","url":"http://example.com/img/logo.svg"}},"description":"简单对比 react、vue，并理解 react"}</script><link rel="canonical" href="http://example.com/2023/03/05/react/%E7%90%86%E8%A7%A3react/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="whitegl0ves" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-03-04T16:34:42.000Z" title="2023/3/5 00:34:42">2023-03-05</time>发表</span><span class="level-item"><time dateTime="2023-08-08T13:03:59.837Z" title="2023/8/8 21:03:59">2023-08-08</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/react/">react</a></span><span class="level-item">20 分钟读完 (大约2997个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">关于react</h1><div class="content"><blockquote>
+<p>简单对比 react、vue，并理解 react</p>
+</blockquote>
+<span id="more"></span>
+
+<h1 id="框架原理概括"><a href="#框架原理概括" class="headerlink" title="框架原理概括"></a>框架原理概括</h1><p>1.React 是库 (library) 还是框架 (framework) ?</p>
+<p>2.Vue 号称是 <code>构建用户界面的渐进式框架</code>，怎么理解渐进式？</p>
+<p>不管是 React 还是 Vue，他们的核心都是 <code>构建UI的库</code>，由以下两部门组成</p>
+<ol>
+<li>基于状态的声明式渲染</li>
+<li>组件化的层次结构</li>
+</ol>
+<p>随着应用复杂程度的提升，需要对不同的需求进行扩展，也有了不同的解决方案，如</p>
+<ul>
+<li>状态管理的难度升级 &#x3D;&gt; Redux Pinia Vuex</li>
+<li>简单页面升级为 SPA（Single Page Application）&#x3D;&gt; React-Router Vue-Router</li>
+<li>提高首屏渲染速度、满足 SEO &#x3D;&gt; SSR（Server Side Render）</li>
+</ul>
+<p>除上面提到的功能外，还有许多功能是 React 与 Vue 本身不包括的，比如构建支持、数据流方案、文档工具等。</p>
+<p><strong>所以，React 与 Vue 本身仅仅是库，而不是框架</strong></p>
+<p>可以称 “包含库本身以及附加功能” 的解决方案称为框架，例如</p>
+<ul>
+<li>UmiJS 是一款基于 React，内置路由、构建、部署等功能的前端框架</li>
+<li>Next.js 是一款基于 React,支持 SSR、SSG（Static Site Generation，静态页面构建）的服务端框架</li>
+<li>AngularJS 是一款内置多种功能的前端框架</li>
+</ul>
+<p>总结：</p>
+<ol>
+<li>React 与 Vue 本身仅仅是库，而不是框架</li>
+<li>Vue 的 “渐进式” 是指 “可以按照需求渐进地引入附加功能”，而不是像 AngularJS 一样开箱即用</li>
+</ol>
+<h1 id="初识前端框架"><a href="#初识前端框架" class="headerlink" title="初识前端框架"></a>初识前端框架</h1><p>几乎所有现代前端框架的实现原理都可以用一下公式替代</p>
+<blockquote>
+<p>UI &#x3D; <em>f</em> (state)</p>
+</blockquote>
+<ul>
+<li>state 代表 <code>当前视图状态</code></li>
+<li><em>f</em> 代表 <code>框架内部运行机制</code></li>
+<li>UI 代表 <code>宿主环境的视图</code></li>
+</ul>
+<h3 id="描述-UI"><a href="#描述-UI" class="headerlink" title="描述 UI"></a>描述 UI</h3><h4 id="JSX"><a href="#JSX" class="headerlink" title="JSX"></a>JSX</h4><p>React 团队认为 “UI 本质上与逻辑存在耦合的部分” 例如</p>
+<ul>
+<li>在 UI 上绑定事件</li>
+<li>在状态变化后改变 UI 的样式或结构</li>
+</ul>
+<p>由于前端工程师使用 ES 编写逻辑，因此同样可以使用 ES 描述 UI，即可使用 UI 与逻辑配合更密切。至于最终方案设计为 <code>类XML</code> 的 ES 语法糖，则是因为前端工程师更熟悉 HTML。</p>
+<blockquote>
+<p>高灵活性意味着 JSX 需要牺牲 <code>潜在的编译时优化空间</code></p>
+</blockquote>
+<h4 id="模版语言"><a href="#模版语言" class="headerlink" title="模版语言"></a>模版语言</h4><p>在原有 HTML 语法的基础上添加了自定义语法。 比如 Vue 的 <code>v-if、v-show、v-for，&#123;&#123;&#125;&#125;</code> 等。</p>
+<p>本质是通过扩展 HTML 元素属性实现各种逻辑，这么做的好处是合法的 HTML 语法，可以直接在浏览器中正常直接显示 ”未替换的原始模版页面“。</p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><ol>
+<li>JSX 的出发点使用 ES 描述逻辑，就扩展 ES 语法，使它能够描述 UI，即 ”从逻辑出发扩展逻辑，描述 UI“</li>
+<li>模版语法 的出发点使用 HTML 描述 UI，那就扩展 HTML,使它能够描述逻辑，即 ”从 UI 出发,扩展 UI，描述逻辑“</li>
+</ol>
+<h3 id="如何组织-UI-与逻辑"><a href="#如何组织-UI-与逻辑" class="headerlink" title="如何组织 UI 与逻辑"></a>如何组织 UI 与逻辑</h3><p>为了实现 UI 与逻辑的关注点分离，需要一种存放 UI 与逻辑的松散耦合单元，这就是组件</p>
+<p>关于组件有两个很重要的问题需要解释</p>
+<ol>
+<li>组件如何组织逻辑与 UI</li>
+<li>如何在组件之间传输数据</li>
+</ol>
+<p>这里借助初中数学知识 “自变量与因变量”,如</p>
+<p><code>2x + 1 = y</code></p>
+<p>x 的变化会导致 y 的变化，其中 x 被称为自变量，y 被称为因变量</p>
+<p>定义自变量可以用 useState hooks &#x3D;&gt; const [number, setNumber] &#x3D; useState(0)</p>
+<p>而在前端框架中，因变量又有两种类型：</p>
+<ol>
+<li>无副作用因变量 &#x3D;&gt; useMemo(() &#x3D;&gt; 2x, [x]) (对应处理逻辑)</li>
+<li>有副作用因变量 &#x3D;&gt; useEffect(() &#x3D;&gt; { document.title &#x3D; x.value }, [x] ) (对应处理逻辑)</li>
+</ol>
+<p>那么可以得出组件内部工作流程如下图：</p>
+<p><img src="https://chulan-824.github.io/Chulan-Blog/assets/img/1.ea0df5f1.png"></p>
+<p>综上所述，组件通过三种方式组织逻辑与 UI</p>
+<ol>
+<li>逻辑中的自变量变化，导致 UI 变化</li>
+<li>逻辑中的自变量变化，导致 ”无副作用因变量“ 变化，导致 UI 变化</li>
+<li>逻辑中的自变量变化，导致 ”有副作用的因变量“ 变化， 导致 UI 变化</li>
+</ol>
+<h3 id="如何在组件之间传输数据"><a href="#如何在组件之间传输数据" class="headerlink" title="如何在组件之间传输数据"></a>如何在组件之间传输数据</h3><ol>
+<li>React.createContext &#x3D;&gt; context &#x2F; context.provider useContext</li>
+<li>props</li>
+<li>store（Redux、Mobx、Pinia）</li>
+</ol>
+<h3 id="前端框架的分类依据"><a href="#前端框架的分类依据" class="headerlink" title="前端框架的分类依据"></a>前端框架的分类依据</h3><p>由上述的出的公式 <code>UI = *f*(state)</code> 可以知道，state（自变量）,是通过直接或者间接（因变量）的方式改变 UI，而这里的 UI 仅仅是 ”对实际宿主环境 UI 的描述“，并不是实际宿主环境 UI。</p>
+<p>比如</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> header = <span class="language-xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello World<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</span><br></pre></td></tr></table></figure>
+
+<p>上述代码只是对 ”对宿主环境 UI 的描述“，通过框架处理后，在宿主环境（比如浏览器）中显示的 H1 样式的 Hello World 才是 ”真实的 UI“</p>
+<p>所以公式可以拆解为一下两步：</p>
+<ol>
+<li>根据自变量（state）变化计算出 UI 变化</li>
+<li>根据 UI 变化执行具体的宿主环境 API （比如浏览器 DOM API）</li>
+</ol>
+<p>对于步骤 2，不同的前端框架的实现基本一致，差异性主要体现在步骤 1 上，所以前端框架主要需要关注 “自变量与 x 的对应关系”。</p>
+<p>随着 x 抽象层级不同不断下降，”自变量到 UI 变化“ 的路径越多，就意味着前端框架在运行时消耗在寻找 ”自变量与 UI 的对应关系“ 上的时间越少</p>
+<p>根据 ”与自变量建立对应关系的抽象层级“ 作为其分类依据，前端框架可以分为以下三类</p>
+<ol>
+<li>应用级框架 &#x3D;&gt; React</li>
+<li>组件级框架 &#x3D;&gt; Vue</li>
+<li>元素级框架 &#x3D;&gt; Solid</li>
+</ol>
+<h3 id="React-中的自变量与因变量"><a href="#React-中的自变量与因变量" class="headerlink" title="React 中的自变量与因变量"></a>React 中的自变量与因变量</h3><ul>
+<li>useState</li>
+<li>useReducer</li>
+<li>useContext</li>
+<li>useMemo &#x3D;&gt; 采用缓存的方式 &#x3D;&gt; 无副作用因变量</li>
+<li>useCallback &#x3D;&gt; 采用缓存的方式 &#x3D;&gt; 无副作用因变量 &#x3D;&gt; 缓存值为函数形式</li>
+<li>useEffect &#x3D;&gt; 有副作用因变量</li>
+<li>useRef &#x3D;&gt; 让 UI 与逻辑之间更灵活</li>
+</ul>
+<h2 id="前端框架使用的技术"><a href="#前端框架使用的技术" class="headerlink" title="前端框架使用的技术"></a>前端框架使用的技术</h2><h3 id="细粒度更新"><a href="#细粒度更新" class="headerlink" title="细粒度更新"></a>细粒度更新</h3><p>在 Vue 和 Mobx 中使用的 ”能自动追踪依赖的技术“ 被称为 ”细粒度更新“（Finegrained Reactivity），这不是一项新技术，KnockoutJS 曾今在 2010 年采用这种技术实现 ”响应式更新“</p>
+<p>这种 ”响应式更新“ 相比 React Hooks 有两个显著优点</p>
+<ol>
+<li>无需显示指明依赖</li>
+<li>由于可以自动跟踪依赖，因此不受 React Hooks ”不能再条件语句中声明 Hooks“ 的限制</li>
+</ol>
+<p>那么为什么 React Hooks 没有使用细粒度更新呢？</p>
+<p>原因是 React 属于应用级框架，从关注 ”自变量与应用的对应关系“ 角度看，其更新粒度不需要很细，因此无需使用细粒度更新。作为代价，React Hooks 在使用上则会受到以上两个优点相对应的限制</p>
+<h3 id="AOT"><a href="#AOT" class="headerlink" title="AOT"></a>AOT</h3><p>现代框架都需要 ”编译“ 这一步骤，用于：</p>
+<ul>
+<li>将 ”框架中描述的 UI“ 转换为宿主环境可识别的代码</li>
+<li>代码转化，比如将 ts 编译为 js、实现 polyfill 等</li>
+<li>执行一些编译时优化</li>
+<li>代码打包、压缩、混淆</li>
+</ul>
+<p>”编译“ 可选择两个时机执行</p>
+<ul>
+<li>代码在构建时，被称为 AOT（Ahead Of Time 提前编译或预编译），宿主环境获得的是编译后的代码</li>
+<li>代码在宿主环境执行时，被称为 JIT （Just In Time 即时编译），代码在宿主环境中编译并执行</li>
+</ul>
+<p>AOT 与 JIT 的区别包括</p>
+<ul>
+<li>AOT 编译报错，JIT 宿主环境运行报错</li>
+<li>使用 JIT 的应用 <code>首次加载慢于</code> AOT 的应用，因为其需要先编译代码，AOT 的应用已经在构建时完成编译，可以直接执行代码</li>
+<li>使用 JIT 的应用 <code>代码体积可能大于</code> 使用 AOT 的应用，因为运行时会增加编译器代码</li>
+</ul>
+<p>借助 AOT 对模版语法编译时的优化，可以减少之前提到公式工作原理的第一步 <code>根据自变量变化计算出 UI 变化</code>。这是大部分 ”采用模版语法描述 UI “的前端框架都会进行的优化，如 Vue3、Angular、Svelte，因为模版语法是固定的，固定意味着 <code>可分析</code>，<code>可分析</code> 意味着在编译时可以标记模版语法静态部分与动态部分，使步骤 1 在寻找 “变化的 UI” 时可以跳过静态部分。</p>
+<p>注</p>
+<p>AOT 能够在多大程度上减少步骤 1（根据自变量变化计算出 UI 变化）视框架实现细节不同而不同</p>
+<p>可是 “采用 JSX 描述 UI” 的前端框架则难以 AOT 中收益，原因在于 JSX 是 ES 的语法糖，ES 语句的灵活性使其很难进行静态分析</p>
+<p>不过有两个思路可以使 “使用 JSX 描述 UI” 的前端框架在 AOT 中收益</p>
+<ol>
+<li>使用新的 AOT 实现</li>
+<li>约束 JSX 的灵活性</li>
+</ol>
+<p>不过 Meta 正在开发的 React Forget 编译器试图来解决这方面问题</p>
+<h3 id="Virtual-DOM"><a href="#Virtual-DOM" class="headerlink" title="Virtual DOM"></a>Virtual DOM</h3><p>Virtual DOM 是实现 “根据自变量变化计算出 UI 变化” 的一种主流技术，其工作原理可以概括为两个步骤：</p>
+<ol>
+<li>将 ”元素描述的 UI“ 转化为 ”VDOM 描述的 UI“</li>
+<li>对比变化前后 ”VDOM 描述的 UI“，计算出 UI 中发生变化的部分</li>
+</ol>
+<p>VDOM 细节上 Vue 和 React 又有一些区别</p>
+<p>Vue：使用 <code>模版语法</code> 描述 UI，模版语法变异为 render 函数<br>1.render 函数执行后返回 ”VNode 描述的 UI“ &#x3D;&gt; render 2.将变化前后 ”VNode 描述的 UI“ 进行比较，计算出 UI 中变化的部分 &#x3D;&gt; patch</p>
+<p>React：使用 JSX 描述 UI，JSX 编译为 createElement 方法</p>
+<ol>
+<li>createElement 方法执行后返回 ”React Element 描述的 UI“</li>
+<li>将 ”React Element 描述的 UI“ 与变化前 ”FiberNode 描述的 UI“ 进行比较，计算出 UI 中变化的部分，同时生成本次更新 ”FiberNode 描述的 UI“</li>
+</ol>
+<p>VDOM 的主要优点：</p>
+<ol>
+<li>相较于 DOM 的体积优势 (DOM 包含大量冗余的属性)</li>
+<li>相较于 AOT 更强大的描述能力</li>
+<li>多平台渲染的抽象能力</li>
+</ol>
+<h1 id="前端框架的实现原理"><a href="#前端框架的实现原理" class="headerlink" title="前端框架的实现原理"></a>前端框架的实现原理</h1><ol>
+<li>Svelte：借由模版语法的约束，经过 AOT 的编译优化，直接建立 “自变量与元素的对应关系”</li>
+<li>Vue3：通过 watchEffect 与自变量形成发布订阅关系，自变量变化触发 render 函数通过 patch 与 prevVDOM 进行对比更新，建立在 ”自变量与组件的对应关系“</li>
+<li>React：改变自变量 &#x3D;&gt; reconcile(VDOM 相关操作) &#x3D;&gt; commit，每次更新都是从应用的根节点开始遍历整个应用</li>
+</ol>
+<p>虽然 React 每次遍历整个应用，但是性能并不会很差，一方面 React 内部有优化机制(优先级调度、Time Slice、Hooks、Suspense)，另一方面 React 提供了相关 API 来减少无意义的遍历，比如 shouldComponentsUpdate、React.Memo、PureComponent</p>
+<p>从 ”编译时或者运行时“ 的角度看待框架</p>
+<ul>
+<li>Svelte 是极致的编译时框架</li>
+<li>React 是极致的运行时框架</li>
+<li>Vue3 同时拥有两者的特性（AOT 和 VDOM），比较均衡</li>
+</ul>
+</div><div class="article-licensing box"><div class="licensing-title"><p>关于react</p><p><a href="http://example.com/2023/03/05/react/理解react/">http://example.com/2023/03/05/react/理解react/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>whitegl0ves</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2023-03-05</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2023-08-08</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="notification is-danger">You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.</div></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3><div class="buttons is-centered"><a class="button donate" href="/" target="_blank" rel="noopener" data-type="afdian"><span class="icon is-small"><i class="fas fa-charging-station"></i></span><span>爱发电</span></a><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>支付宝</span><span class="qrcode"><img src="/" alt="支付宝"></span></a><a class="button donate" href="/" target="_blank" rel="noopener" data-type="buymeacoffee"><span class="icon is-small"><i class="fas fa-coffee"></i></span><span>送我杯咖啡</span></a><a class="button donate" href="/" target="_blank" rel="noopener" data-type="patreon"><span class="icon is-small"><i class="fab fa-patreon"></i></span><span>Patreon</span></a><div class="notification is-danger">You forgot to set the <code>business</code> or <code>currency_code</code> for Paypal. Please set it in <code>_config.yml</code>.</div><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>微信</span><span class="qrcode"><img src="/" alt="微信"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2023/03/05/react/%E9%A1%B9%E7%9B%AE%E5%88%9D%E5%A7%8B%E5%8C%96/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">项目初始化</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2023/02/05/engineering/1.%E4%BB%A3%E7%A0%81lint%E6%A0%A1%E9%AA%8C/"><span class="level-item">lint</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div class="notification is-danger">You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.</div></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.png" alt="Your name"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Your name</p><p class="is-size-6 is-block">Your title</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Your location</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">99</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">29</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">0</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/ppoffice" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/ppoffice"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/android/"><span class="level-start"><span class="level-item">android</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/android/%E5%8E%9F%E7%90%86/"><span class="level-start"><span class="level-item">原理</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/engineering/"><span class="level-start"><span class="level-item">engineering</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/javascript/"><span class="level-start"><span class="level-item">javascript</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/javascript/%E5%9F%BA%E7%A1%80/"><span class="level-start"><span class="level-item">基础</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/project/"><span class="level-start"><span class="level-item">project</span></span><span class="level-end"><span class="level-item tag">4</span></span></a><ul><li><a class="level is-mobile" href="/categories/project/%E4%BE%9D%E8%B5%96%E6%B2%BB%E7%90%86/"><span class="level-start"><span class="level-item">依赖治理</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/react/"><span class="level-start"><span class="level-item">react</span></span><span class="level-end"><span class="level-item tag">17</span></span></a></li><li><a class="level is-mobile" href="/categories/ssr/"><span class="level-start"><span class="level-item">ssr</span></span><span class="level-end"><span class="level-item tag">4</span></span></a><ul><li><a class="level is-mobile" href="/categories/ssr/react/"><span class="level-start"><span class="level-item">react</span></span><span class="level-end"><span class="level-item tag">3</span></span></a><ul><li><a class="level is-mobile" href="/categories/ssr/react/next/"><span class="level-start"><span class="level-item">next</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/ssr/%E5%8E%9F%E7%90%86/"><span class="level-start"><span class="level-item">原理</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/stencil/"><span class="level-start"><span class="level-item">stencil</span></span><span class="level-end"><span class="level-item tag">5</span></span></a><ul><li><a class="level is-mobile" href="/categories/stencil/%E5%89%8D%E8%A8%80/"><span class="level-start"><span class="level-item">前言</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/stencil/%E5%8E%9F%E7%90%86/"><span class="level-start"><span class="level-item">原理</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/stencil/%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/"><span class="level-start"><span class="level-item">基础使用</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/vue/"><span class="level-start"><span class="level-item">vue</span></span><span class="level-end"><span class="level-item tag">28</span></span></a><ul><li><a class="level is-mobile" href="/categories/vue/compiler/"><span class="level-start"><span class="level-item">compiler</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="/categories/vue/effect/"><span class="level-start"><span class="level-item">effect</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/vue/others/"><span class="level-start"><span class="level-item">others</span></span><span class="level-end"><span class="level-item tag">6</span></span></a><ul><li><a class="level is-mobile" href="/categories/vue/others/%E5%86%85%E7%BD%AE%E7%BB%84%E4%BB%B6/"><span class="level-start"><span class="level-item">内置组件</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/vue/others/%E7%89%B9%E6%AE%8A%E5%85%83%E7%B4%A0/"><span class="level-start"><span class="level-item">特殊元素</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/vue/reactive/"><span class="level-start"><span class="level-item">reactive</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile" href="/categories/vue/ref/"><span class="level-start"><span class="level-item">ref</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/vue/render/"><span class="level-start"><span class="level-item">render</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/webpack/"><span class="level-start"><span class="level-item">webpack</span></span><span class="level-end"><span class="level-item tag">11</span></span></a><ul><li><a class="level is-mobile" href="/categories/webpack/base/"><span class="level-start"><span class="level-item">base</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile" href="/categories/webpack/loader/"><span class="level-start"><span class="level-item">loader</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/webpack/plugin/"><span class="level-start"><span class="level-item">plugin</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-08-11T15:35:18.114Z">2023-08-11</time></p><p class="title"><a href="/2023/08/11/js/%E5%9F%BA%E7%A1%80/%E5%BC%82%E6%AD%A5/"> </a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-08-08T16:36:42.000Z">2023-08-09</time></p><p class="title"><a href="/2023/08/09/stencil/%E5%89%8D%E8%A8%80/">写在前面</a></p><p class="categories"><a href="/categories/stencil/">stencil</a> / <a href="/categories/stencil/%E5%89%8D%E8%A8%80/">前言</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-08-07T12:33:48.537Z">2023-08-07</time></p><p class="title"><a href="/2023/08/07/stencil/%E5%AE%9E%E6%88%98/%E5%AE%9E%E6%88%98image%E7%BB%84%E4%BB%B6/"> </a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-08-07T12:30:58.207Z">2023-08-07</time></p><p class="title"><a href="/2023/08/07/stencil/%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/2.%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/"> </a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-08-07T08:38:26.954Z">2023-08-07</time></p><p class="title"><a href="/2023/08/07/stencil/%E6%80%BB%E8%A7%88%E5%9B%BE/"> </a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2023/"><span class="level-start"><span class="level-item">2023</span></span><span class="level-end"><span class="level-item tag">95</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/"><span class="level-start"><span class="level-item">2022</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li></ul></div></div></div><!--!--><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div><div class="card widget"><div class="card-content"><div class="notification is-danger">You need to set <code>client_id</code> and <code>slot_id</code> to show this AD unit. Please set it in <code>_config.yml</code>.</div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="whitegl0ves" height="28"></a><p class="is-size-7"><span>&copy; 2023 whitegl0ves</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p><p class="is-size-7">© 2019</p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>

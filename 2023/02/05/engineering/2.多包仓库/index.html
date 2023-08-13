@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>仓库管理 - whitegl0ves</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="whitegl0ves"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="whitegl0ves"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="仓库管理"><meta property="og:type" content="blog"><meta property="og:title" content="仓库管理"><meta property="og:url" content="http://example.com/2023/02/05/engineering/2.%E5%A4%9A%E5%8C%85%E4%BB%93%E5%BA%93/"><meta property="og:site_name" content="whitegl0ves"><meta property="og:description" content="仓库管理"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8a0d67eb612c4c73bd5091cd5b340620~tplv-k3u1fbpfcp-jj-mark:1890:0:0:0:q75.avis"><meta property="og:image" content="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d4fa5ce356a845b791731e39372aa8a1~tplv-k3u1fbpfcp-jj-mark:1890:0:0:0:q75.avis"><meta property="og:image" content="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/49783cc91fd841758f6560ffe377b28d~tplv-k3u1fbpfcp-jj-mark:1890:0:0:0:q75.avis"><meta property="article:published_time" content="2023-02-04T17:42:12.000Z"><meta property="article:modified_time" content="2023-08-12T08:00:03.064Z"><meta property="article:author" content="whitegl0ves"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8a0d67eb612c4c73bd5091cd5b340620~tplv-k3u1fbpfcp-jj-mark:1890:0:0:0:q75.avis"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/02/05/engineering/2.%E5%A4%9A%E5%8C%85%E4%BB%93%E5%BA%93/"},"headline":"仓库管理","image":[],"datePublished":"2023-02-04T17:42:12.000Z","dateModified":"2023-08-12T08:00:03.064Z","author":{"@type":"Person","name":"whitegl0ves"},"publisher":{"@type":"Organization","name":"whitegl0ves","logo":{"@type":"ImageObject","url":"http://example.com/img/logo.svg"}},"description":"仓库管理"}</script><link rel="canonical" href="http://example.com/2023/02/05/engineering/2.%E5%A4%9A%E5%8C%85%E4%BB%93%E5%BA%93/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="whitegl0ves" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-02-04T17:42:12.000Z" title="2023/2/5 01:42:12">2023-02-05</time>发表</span><span class="level-item"><time dateTime="2023-08-12T08:00:03.064Z" title="2023/8/12 16:00:03">2023-08-12</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/engineering/">engineering</a></span><span class="level-item">9 分钟读完 (大约1298个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">仓库管理</h1><div class="content"><blockquote>
+<p>仓库管理</p>
+</blockquote>
+<span id="more"></span>
+
+<p>当一个仓库规模逐渐升级并拆分为多个模块时，使用<code>Monorepo</code>的方式管理仓库再也适合不过了。这些模块通常在同一仓库中依赖其他不同模块, 同时不同模块间还会互相依赖, 那管理与组织这些依赖显然很重要。</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8a0d67eb612c4c73bd5091cd5b340620~tplv-k3u1fbpfcp-jj-mark:1890:0:0:0:q75.avis" alt="项目依赖"></p>
+<p>为了解决这些依赖关系，<code>lerna</code>就此诞生。<code>lerna</code>是一种<code>Monorepo</code>解决方案，用于管理包括多个子包的仓库，可优化使用<code>Git</code>与<code>Npm</code>管理<code>多包仓库</code>的工作流程。日常开发可在主仓库中管理多个模块，结合其他工具解决多个子包互相依赖的问题。本章将带领你 <strong>基于 Yarn 与 Lerna 搭建多包仓库基建模板</strong> ，将那些仓库内容出现关联的模块统一使用<code>Monorepo</code>的方式管理起来，降低日常开发的沟通难度，提升仓库管理的便利性。</p>
+<h3 id="背景：Monorepo-仓库带来的收益"><a href="#背景：Monorepo-仓库带来的收益" class="headerlink" title="背景：Monorepo 仓库带来的收益"></a>背景：Monorepo 仓库带来的收益</h3><p><code>lerna</code>诞生于<code>babel</code>的仓库管理模式中，因为<code>babel</code>实在是太多模块了，甚至多到不可管理，就这样促使了<code>lerna</code>的诞生。像平时使用的<code>angular</code>、<code>react</code>、<code>vue</code>、<code>jest</code>等，其仓库都使用<code>lerna</code>管理。</p>
+<p>打开它们的仓库，无一例外都是以下目录结构。</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">project</span><br><span class="line">├─ lib1</span><br><span class="line">│  ├─ src</span><br><span class="line">│  └─ package.json</span><br><span class="line">├─ lib2</span><br><span class="line">│  ├─ src</span><br><span class="line">│  └─ package.json</span><br><span class="line">├─ lib3</span><br><span class="line">│  ├─ src</span><br><span class="line">│  └─ package.json</span><br><span class="line">└─ package.json</span><br></pre></td></tr></table></figure>
+
+<p>使用基于<code>Monorepo</code>的<code>lerna</code>管理仓库，能为仓库带来更好的收益。</p>
+<blockquote>
+<p>节省存储空间</p>
+</blockquote>
+<p>若一个仓库中多个子包都依赖<code>react</code>与<code>react-dom</code>，在为每个子包安装依赖时会在各自的<code>node_modules</code>文件夹中产生大量冗余的<code>Npm模块</code>。</p>
+<p>若使用<code>lerna</code>，会将相同版本的<code>Npm模块</code>提升到仓库根目录中的<code>node_modules</code>文件夹，以降低模块沉积。</p>
+<blockquote>
+<p>解决依赖升级</p>
+</blockquote>
+<p>若一个仓库中多个子包都依赖某一个或多个其他子包<code>X</code>，当<code>X</code>升级版本时需将它们发布到<code>Npm公有仓库</code>，再更新依赖<code>X</code>的子包的依赖，才能将改动的代码应用起来。</p>
+<p>若使用<code>lerna</code>，则会直接跳过将<code>X</code>发布到<code>Npm公有仓库</code>的流程，子包可在本地环境直接<code>link</code>到<code>X</code>。</p>
+<blockquote>
+<p>共用同一仓库</p>
+</blockquote>
+<p>若一个仓库中多个子包都因为需求更新而发版，那将引起一堆重复操作，导致每个子包都要走一次提交流程。</p>
+<p>若使用<code>lerna</code>，则解决了这些子包的工作流程，就可放心将它们存放到同一仓库中管理了。</p>
+<hr>
+<p>其实<code>lerna</code>的最终目标还是围绕着<code>统一工作流程</code>与<code>分割通用代码</code>，毕竟当仓库内容出现关联时，无任何一种调试方式比源码放在一起更高效，而<code>lerna</code>就是解决源码放在一起带来的副作用，使用<code>Monorepo</code>的方式解决这些问题，使<code>多包仓库</code>管理起来更高效。</p>
+<p>虽然<code>lerna</code>管理仓库会导致仓库的存储空间变得更大，但其带来的优势也是常见方案不能企及的。</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">仓库管理的工作流程包括但不限于构建、测试、打包、发布、部署等流程。</span><br></pre></td></tr></table></figure>
+
+<h3 id="方案：基于-Yarn-与-Lerna-搭建多包仓库基建模板"><a href="#方案：基于-Yarn-与-Lerna-搭建多包仓库基建模板" class="headerlink" title="方案：基于 Yarn 与 Lerna 搭建多包仓库基建模板"></a>方案：基于 Yarn 与 Lerna 搭建多包仓库基建模板</h3><p>在使用<code>lerna</code>前，一个<code>Multirepo仓库</code>的组织形式可能是这样的。</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d4fa5ce356a845b791731e39372aa8a1~tplv-k3u1fbpfcp-jj-mark:1890:0:0:0:q75.avis" alt="Multirepo"></p>
+<p>在使用<code>lerna</code>后，<code>Multirepo仓库</code>就会变成<code>Menorepo仓库</code>，其组织形式就会变成这样。</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/49783cc91fd841758f6560ffe377b28d~tplv-k3u1fbpfcp-jj-mark:1890:0:0:0:q75.avis" alt="Monorepo"></p>
+<p>通过上图基本可判断出使用<code>lerna</code>前后的差异。<code>lerna</code>显式地改变项目结构，把多个子包合并为一个仓库，然后使用<code>packages</code>文件夹存放每个子包，以使用一个仓库管理多个子包。另外还可用<code>lerna</code>提供的命令轻松管理<code>Menorepo仓库</code>，掌握以下命令就能操作<code>lerna</code>。</p>
+<table>
+<thead>
+<tr>
+<th align="center">命令</th>
+<th align="center">功能</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>lerna init</code></td>
+<td align="center">初始项目</td>
+<td></td>
+</tr>
+<tr>
+<td align="center"><code>lerna boostrap</code></td>
+<td align="center">安装依赖</td>
+<td>自动解决子包间的依赖关系</td>
+</tr>
+<tr>
+<td align="center">子包内部互相依赖会使用软链接处理</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td align="center"><code>lerna clean</code></td>
+<td align="center">卸载依赖</td>
+<td>只能卸载每个子包的<code>node_modules</code></td>
+</tr>
+<tr>
+<td align="center">不能卸载根目录的<code>node_modules</code></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td align="center"><code>lerna create </code></td>
+<td align="center">新增子包</td>
+<td>在<code>packages</code>文件夹中创建由<code>lerna</code>管理的子包</td>
+</tr>
+<tr>
+<td align="center"><code>lerna add </code></td>
+<td align="center">安装模块</td>
+<td>为所有子包安装模块</td>
+</tr>
+<tr>
+<td align="center">可通过<code>--scope=pkg</code>安装指定子包模块</td>
+<td align="center"></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>| &#96;lerna run</p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>仓库管理</p><p><a href="http://example.com/2023/02/05/engineering/2.多包仓库/">http://example.com/2023/02/05/engineering/2.多包仓库/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>whitegl0ves</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2023-02-05</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2023-08-12</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="notification is-danger">You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.</div></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3><div class="buttons is-centered"><a class="button donate" href="/" target="_blank" rel="noopener" data-type="afdian"><span class="icon is-small"><i class="fas fa-charging-station"></i></span><span>爱发电</span></a><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>支付宝</span><span class="qrcode"><img src="/" alt="支付宝"></span></a><a class="button donate" href="/" target="_blank" rel="noopener" data-type="buymeacoffee"><span class="icon is-small"><i class="fas fa-coffee"></i></span><span>送我杯咖啡</span></a><a class="button donate" href="/" target="_blank" rel="noopener" data-type="patreon"><span class="icon is-small"><i class="fab fa-patreon"></i></span><span>Patreon</span></a><div class="notification is-danger">You forgot to set the <code>business</code> or <code>currency_code</code> for Paypal. Please set it in <code>_config.yml</code>.</div><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>微信</span><span class="qrcode"><img src="/" alt="微信"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2023/02/05/engineering/1.%E4%BB%A3%E7%A0%81lint%E6%A0%A1%E9%AA%8C/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">lint</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2023/02/05/engineering/3.%E6%B5%81%E7%A8%8B%E8%87%AA%E5%8A%A8%E5%8C%96/"><span class="level-item">自动化</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div class="notification is-danger">You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.</div></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.png" alt="Your name"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Your name</p><p class="is-size-6 is-block">Your title</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Your location</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">99</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">29</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">0</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/ppoffice" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/ppoffice"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/android/"><span class="level-start"><span class="level-item">android</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/android/%E5%8E%9F%E7%90%86/"><span class="level-start"><span class="level-item">原理</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/engineering/"><span class="level-start"><span class="level-item">engineering</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/javascript/"><span class="level-start"><span class="level-item">javascript</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/javascript/%E5%9F%BA%E7%A1%80/"><span class="level-start"><span class="level-item">基础</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/project/"><span class="level-start"><span class="level-item">project</span></span><span class="level-end"><span class="level-item tag">4</span></span></a><ul><li><a class="level is-mobile" href="/categories/project/%E4%BE%9D%E8%B5%96%E6%B2%BB%E7%90%86/"><span class="level-start"><span class="level-item">依赖治理</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/react/"><span class="level-start"><span class="level-item">react</span></span><span class="level-end"><span class="level-item tag">17</span></span></a></li><li><a class="level is-mobile" href="/categories/ssr/"><span class="level-start"><span class="level-item">ssr</span></span><span class="level-end"><span class="level-item tag">4</span></span></a><ul><li><a class="level is-mobile" href="/categories/ssr/react/"><span class="level-start"><span class="level-item">react</span></span><span class="level-end"><span class="level-item tag">3</span></span></a><ul><li><a class="level is-mobile" href="/categories/ssr/react/next/"><span class="level-start"><span class="level-item">next</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/ssr/%E5%8E%9F%E7%90%86/"><span class="level-start"><span class="level-item">原理</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/stencil/"><span class="level-start"><span class="level-item">stencil</span></span><span class="level-end"><span class="level-item tag">5</span></span></a><ul><li><a class="level is-mobile" href="/categories/stencil/%E5%89%8D%E8%A8%80/"><span class="level-start"><span class="level-item">前言</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/stencil/%E5%8E%9F%E7%90%86/"><span class="level-start"><span class="level-item">原理</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/stencil/%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/"><span class="level-start"><span class="level-item">基础使用</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/vue/"><span class="level-start"><span class="level-item">vue</span></span><span class="level-end"><span class="level-item tag">28</span></span></a><ul><li><a class="level is-mobile" href="/categories/vue/compiler/"><span class="level-start"><span class="level-item">compiler</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="/categories/vue/effect/"><span class="level-start"><span class="level-item">effect</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/vue/others/"><span class="level-start"><span class="level-item">others</span></span><span class="level-end"><span class="level-item tag">6</span></span></a><ul><li><a class="level is-mobile" href="/categories/vue/others/%E5%86%85%E7%BD%AE%E7%BB%84%E4%BB%B6/"><span class="level-start"><span class="level-item">内置组件</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/vue/others/%E7%89%B9%E6%AE%8A%E5%85%83%E7%B4%A0/"><span class="level-start"><span class="level-item">特殊元素</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/vue/reactive/"><span class="level-start"><span class="level-item">reactive</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile" href="/categories/vue/ref/"><span class="level-start"><span class="level-item">ref</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/vue/render/"><span class="level-start"><span class="level-item">render</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/webpack/"><span class="level-start"><span class="level-item">webpack</span></span><span class="level-end"><span class="level-item tag">11</span></span></a><ul><li><a class="level is-mobile" href="/categories/webpack/base/"><span class="level-start"><span class="level-item">base</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile" href="/categories/webpack/loader/"><span class="level-start"><span class="level-item">loader</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/webpack/plugin/"><span class="level-start"><span class="level-item">plugin</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-08-11T15:35:18.114Z">2023-08-11</time></p><p class="title"><a href="/2023/08/11/js/%E5%9F%BA%E7%A1%80/%E5%BC%82%E6%AD%A5/"> </a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-08-08T16:36:42.000Z">2023-08-09</time></p><p class="title"><a href="/2023/08/09/stencil/%E5%89%8D%E8%A8%80/">写在前面</a></p><p class="categories"><a href="/categories/stencil/">stencil</a> / <a href="/categories/stencil/%E5%89%8D%E8%A8%80/">前言</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-08-07T12:33:48.537Z">2023-08-07</time></p><p class="title"><a href="/2023/08/07/stencil/%E5%AE%9E%E6%88%98/%E5%AE%9E%E6%88%98image%E7%BB%84%E4%BB%B6/"> </a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-08-07T12:30:58.207Z">2023-08-07</time></p><p class="title"><a href="/2023/08/07/stencil/%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/2.%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/"> </a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-08-07T08:38:26.954Z">2023-08-07</time></p><p class="title"><a href="/2023/08/07/stencil/%E6%80%BB%E8%A7%88%E5%9B%BE/"> </a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2023/"><span class="level-start"><span class="level-item">2023</span></span><span class="level-end"><span class="level-item tag">95</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/"><span class="level-start"><span class="level-item">2022</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li></ul></div></div></div><!--!--><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div><div class="card widget"><div class="card-content"><div class="notification is-danger">You need to set <code>client_id</code> and <code>slot_id</code> to show this AD unit. Please set it in <code>_config.yml</code>.</div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="whitegl0ves" height="28"></a><p class="is-size-7"><span>&copy; 2023 whitegl0ves</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p><p class="is-size-7">© 2019</p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
